@@ -1,0 +1,46 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"><meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <meta name="theme-color" content="#8f0805">
+  <meta name="description" content="Mr Foodie — Grab your food. Burgers, pizza, fried chicken, wraps, fries and more.">
+  <title>Mr Foodie | Grab Your Food</title>
+  <link rel="preconnect" href="https://images.unsplash.com"><link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=DM+Sans:wght@400;500;600;700;800&family=Oswald:wght@500;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+<header class="site-header">
+  <a class="brand" href="#home"><img src="assets/logo.png" alt="Mr Foodie logo"><span>MR <b>FOODIE</b><small>GRAB YOUR FOOD</small></span></a>
+  <button class="menu-toggle" aria-label="Open menu">☰</button>
+  <nav id="nav"><a href="#home">Home</a><a href="#menu">Menu</a><a href="#about">About</a><a href="#contact">Contact</a></nav>
+  <a class="header-order" href="#menu">Order Now <span>↗</span></a>
+</header>
+<main>
+<section class="hero" id="home">
+  <div class="hero-copy"><p class="eyebrow"><span></span> BIG FLAVOUR. BIGGER CRAVINGS.</p>
+    <h1>GOOD FOOD.<br><em>GOOD MOOD.</em></h1>
+    <p class="hero-text">Your cravings called. We answered. Dive into bold bites, loaded fries, cheesy pizza and the kind of burgers you dream about.</p>
+    <div class="hero-actions"><a class="btn btn-primary" href="#menu">Explore Menu <b>↗</b></a><a class="text-link" href="#about">Discover our story <span>→</span></a></div>
+    <div class="hero-stats"><div><strong>25+</strong><small>FOOD FAVOURITES</small></div><i></i><div><strong>100%</strong><small>CRAVING APPROVED</small></div></div>
+  </div>
+  <div class="hero-art"><div class="hero-ring"></div><img src="https://images.unsplash.com/photo-1568901346375-23c9450c58cd?auto=format&fit=crop&w=1000&q=88" alt="Juicy cheeseburger"><div class="hero-sticker">MADE<br>TO<br>CRAVE!</div><div class="hero-caption">FRESHLY MADE <b>★</b> FULL OF FLAVOUR</div></div>
+</section>
+<div class="ticker"><div>BURGERS <b>✦</b> PIZZA <b>✦</b> FRIED CHICKEN <b>✦</b> LOADED FRIES <b>✦</b> WRAPS <b>✦</b> GOOD VIBES <b>✦</b> BURGERS <b>✦</b> PIZZA <b>✦</b> FRIED CHICKEN <b>✦</b></div></div>
+<section class="menu-section section" id="menu">
+  <div class="section-heading"><div><p class="eyebrow">THE GOOD STUFF</p><h2>THE <em>MENU</em></h2></div><p>Big bites. Bold flavours.<br>Something for every craving.</p></div>
+  <div class="filters" id="filters">
+    <button class="filter active" data-category="All">All items</button><button class="filter" data-category="Burgers">Burgers</button><button class="filter" data-category="Pizza">Pizza</button><button class="filter" data-category="Chicken">Chicken</button><button class="filter" data-category="Sides">Sides</button><button class="filter" data-category="Wraps">Wraps</button><button class="filter" data-category="Drinks">Drinks</button><button class="filter" data-category="Desserts">Desserts</button>
+  </div>
+  <div class="menu-grid" id="menuGrid"></div>
+</section>
+<section class="feature section" id="about"><div class="feature-image"><img src="https://images.unsplash.com/photo-1550547660-d9450f859349?auto=format&fit=crop&w=1100&q=85" alt="Fresh burger and fries"><span>GOOD FOOD<br>GOOD TIMES</span></div><div class="feature-copy"><p class="eyebrow">A LITTLE ABOUT US</p><h2>WE TAKE<br>FOOD <em>SERIOUSLY.</em></h2><p>At Mr Foodie, every bite is all about flavour. From juicy burgers to cheesy pizzas and crispy favourites, we bring together feel-good food made for sharing — or keeping all to yourself.</p><a class="btn btn-dark" href="#menu">Find your favourite <b>↗</b></a></div></section>
+<section class="order-banner"><div><p class="eyebrow">YOUR NEXT FAVOURITE BITE IS CALLING</p><h2>HUNGRY? LET'S<br><em>FIX THAT.</em></h2></div><a class="btn btn-light" href="#menu">Build your order <b>↗</b></a></section>
+<section class="contact section" id="contact"><div><p class="eyebrow">SAY HELLO</p><h2>LET'S TALK<br><em>FOOD.</em></h2><p>Questions, feedback or a big order? Get in touch.</p></div><div class="contact-details"><a href="mailto:mrfoodieglobal@gmail.com"><span>EMAIL</span><b>mrfoodieglobal@gmail.com ↗</b></a><a href="tel:+923272398416"><span>CALL / WHATSAPP</span><b>+92 327 2398416 ↗</b></a><a href="https://www.instagram.com/mrfoodiefastfood" target="_blank" rel="noopener"><span>FOLLOW THE CRAVINGS</span><b>@mrfoodiefastfood ↗</b></a></div></section>
+</main>
+<footer><a class="brand footer-brand" href="#home"><img src="assets/logo.png" alt=""><span>MR <b>FOODIE</b><small>GRAB YOUR FOOD</small></span></a><p>© <span id="year"></span> Mr Foodie. Made for food lovers.</p><a href="#home">BACK TO TOP ↑</a></footer>
+
+<div class="cart-fab" id="cartFab" aria-live="polite">🛒 <span id="cartCount">0</span> <b>VIEW ORDER</b></div>
+<div class="modal-backdrop" id="cartModal" aria-hidden="true"><section class="cart-modal"><button class="close-modal" id="closeCart" aria-label="Close">×</button><p class="eyebrow">READY WHEN YOU ARE</p><h2>YOUR <em>ORDER</em></h2><div id="cartItems"></div><div class="cart-total"><span>ESTIMATED TOTAL</span><strong id="cartTotal">Rs 0</strong></div><form id="orderForm"><label>Your name<input required name="customer" placeholder="Name"></label><label>Phone number<input required name="phone" type="tel" placeholder="+92 ..."></label><label>Delivery address<textarea required name="address" rows="2" placeholder="Where should we deliver?"></textarea></label><label>Extra instructions<textarea name="notes" rows="2" placeholder="Any special requests? (optional)"></textarea></label><button class="btn btn-primary submit-order" type="submit">SEND ORDER TO GMAIL ↗</button><small class="form-note">Your order will open in Gmail as a ready-to-send email. Please press Send to place it.</small></form></section></div>
+<script src="script.js"></script>
+</body></html>
